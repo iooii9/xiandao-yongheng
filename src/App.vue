@@ -91,10 +91,6 @@
           <component :is="isFullscreenMode ? Minimize2 : Maximize2" :size="18" />
           <span>{{ isFullscreenMode ? '退出全屏' : '进入全屏' }}</span>
         </button>
-        <button class="action-menu-item" @click="showHelp(); close()">
-          <BookOpen :size="18" />
-          <span>教程说明</span>
-        </button>
       </template>
     </ActionMenu>
 
@@ -148,26 +144,6 @@
         </div>
         <div class="settings-modal-body">
           <PromptManagementPanel />
-        </div>
-      </div>
-    </div>
-
-    <!-- 赞助支持弹窗 -->
-    <div v-if="showSponsorModal" class="settings-modal-overlay" @click.self="showSponsorModal = false">
-      <div class="settings-modal-content sponsor-modal-content">
-        <div class="settings-modal-header">
-          <h3>赞助支持（自愿）</h3>
-          <button class="close-btn" @click="showSponsorModal = false">&times;</button>
-        </div>
-        <div class="settings-modal-body sponsor-modal-body">
-          <div class="sponsor-qr">
-            <img src="https://ddct.top/zhifubao.jpg" alt="支付宝赞助二维码" loading="lazy" />
-            <span>支付宝</span>
-          </div>
-          <div class="sponsor-qr">
-            <img src="https://ddct.top/weixing.jpg" alt="微信赞助二维码" loading="lazy" />
-            <span>微信</span>
-          </div>
         </div>
       </div>
     </div>
