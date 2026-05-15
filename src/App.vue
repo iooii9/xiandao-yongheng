@@ -1,9 +1,10 @@
 <!--
-  仙道永恒 (XianDaoYongHeng) - AI驱动的沉浸式修仙文字冒险游戏
-  @author 星尘 (starDustStudio)
+  仙途 (XianTu) - AI驱动的沉浸式修仙文字冒险游戏
+  @author 千夜 (qianye60)
   @license CC BY-NC-SA 4.0
-  @copyright Copyright (c) 2024-2026 星尘
-  GitHub: https://github.com/starDustStudio
+  @copyright Copyright (c) 2024-2026 千夜
+  GitHub: https://github.com/qianye60
+  Bilibili: https://space.bilibili.com/477576651
   商业使用需经作者授权 | Commercial use requires permission
 -->
 <template>
@@ -48,6 +49,7 @@
         </svg>
       </label>
       <a
+        href="https://ddct.top"
         target="_blank"
         rel="noopener noreferrer"
         class="theme-toggle"
@@ -93,7 +95,7 @@
           <BookOpen :size="18" />
           <span>教程说明</span>
         </button>
-              </template>
+      </template>
     </ActionMenu>
 
     <!-- 路由视图将在这里渲染所有页面 -->
@@ -150,15 +152,20 @@
       </div>
     </div>
 
-    
+    <!-- 赞助支持弹窗 -->
     <div v-if="showSponsorModal" class="settings-modal-overlay" @click.self="showSponsorModal = false">
       <div class="settings-modal-content sponsor-modal-content">
         <div class="settings-modal-header">
+          <h3>赞助支持（自愿）</h3>
+          <button class="close-btn" @click="showSponsorModal = false">&times;</button>
+        </div>
         <div class="settings-modal-body sponsor-modal-body">
           <div class="sponsor-qr">
+            <img src="https://ddct.top/zhifubao.jpg" alt="支付宝赞助二维码" loading="lazy" />
             <span>支付宝</span>
           </div>
           <div class="sponsor-qr">
+            <img src="https://ddct.top/weixing.jpg" alt="微信赞助二维码" loading="lazy" />
             <span>微信</span>
           </div>
         </div>
@@ -169,7 +176,7 @@
     <div v-if="showAuthorModal" class="help-overlay" @click.self="showAuthorModal = false">
       <div class="help-modal">
         <div class="help-header">
-          <h2 class="help-title">仙道永恒教程</h2>
+          <h2 class="help-title">仙途教程</h2>
           <button class="help-close" @click="showAuthorModal = false">
             <X :size="18" />
           </button>
@@ -180,6 +187,7 @@
 
           <p class="help-desc">AI驱动的沉浸式修仙文字冒险游戏</p>
 
+          <a href="https://ddct.top/" target="_blank" class="help-link-card">
             <Globe :size="18" />
             <span>查看官网介绍</span>
             <ArrowRight :size="16" />
@@ -203,8 +211,8 @@
 
           <div class="help-footer">
             <div class="help-author">
-              <span>作者：星尘</span>
-              <a href="https://github.com/starDustStudio/XianDaoYongHeng" target="_blank">GitHub</a>
+              <span>作者：千夜</span>
+              <a href="https://github.com/qianye60/XianTu" target="_blank">GitHub</a>
             </div>
             <div class="help-license">CC BY-NC-SA 4.0</div>
           </div>
@@ -861,6 +869,7 @@ watch(route, (newRoute, oldRoute) => {
   color: var(--color-text-secondary);
 }
 
+.help-link-card {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -874,9 +883,11 @@ watch(route, (newRoute, oldRoute) => {
   transition: background 0.2s;
 }
 
+.help-link-card:hover {
   background: var(--color-surface-hover);
 }
 
+.help-link-card span {
   flex: 1;
   font-size: 0.9rem;
   font-weight: 500;
