@@ -30,7 +30,7 @@
     "clsx": "^2.1.1",
     "idb": "^8.0.3",
     "jquery": "^3.7.1",
-    "lucide-vue-next": "^0.541.0",
+    "lucide-vue-next": "^1.0.0",
     "pinia": "^3.0.4",
     "pixi.js": "^7.4.3",
     "react-force-graph-2d": "^1.29.1",
