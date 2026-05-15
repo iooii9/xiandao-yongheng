@@ -150,13 +150,10 @@
       </div>
     </div>
 
-    <!-- 赞助支持弹窗 -->
+    
     <div v-if="showSponsorModal" class="settings-modal-overlay" @click.self="showSponsorModal = false">
       <div class="settings-modal-content sponsor-modal-content">
         <div class="settings-modal-header">
-          <h3>赞助支持（自愿）</h3>
-          <button class="close-btn" @click="showSponsorModal = false">&times;</button>
-        </div>
         <div class="settings-modal-body sponsor-modal-body">
           <div class="sponsor-qr">
             <span>支付宝</span>
