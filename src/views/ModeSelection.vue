@@ -53,15 +53,6 @@
           </div>
 
 
-            </div>
-            <div v-if="selectedMode === 'cloud'" class="check-mark">
-              <Check :size="18" />
-            </div>
-            <div v-if="!backendReady" class="disabled-mask">
-              <Lock :size="20" />
-              <span>{{ $t('未启用') }}</span>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -71,7 +62,7 @@
           <div v-if="selectedMode" class="action-group">
             <button class="btn-primary" @click="startNewGame">
               <Sparkles :size="18" />
-              <span>{{ $t('初入仙道永恒') }}</span>
+              <span>{{ $t('初入仙途') }}</span>
             </button>
             <button class="btn-secondary" @click="enterCharacterSelection">
               <History :size="18" />
